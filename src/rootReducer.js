@@ -4,5 +4,6 @@ import books from './reducers/books';
 
 export default combineReducers({
     // current user 
-    user
+    user,
+    books
 });
