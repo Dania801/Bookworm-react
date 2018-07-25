@@ -4,6 +4,10 @@ import books from './reducers/books';
 
 export default combineReducers({
     // current user 
+<<<<<<< HEAD
     user,
     books
+=======
+    user
+>>>>>>> 3827226... Authorized routes
 });
