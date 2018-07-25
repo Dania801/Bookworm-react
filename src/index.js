@@ -18,8 +18,12 @@ const store = createStore (
 ); 
 
 if(localStorage.bookwormJWT){
+    const payload = decode(localStorage.bookwormJWT);
+    console.log('payload ==> ',payload)
     const user = {
-        token: localStorage.bookwormJWT
+        token: localStorage.bookwormJWT,
+        email: payload.email, 
+        confirmed: payload.confirmed
     };
 
     store.dispatch(userLoggedIn(user));

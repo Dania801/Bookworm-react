@@ -8,7 +8,7 @@ export const userLoggedIn = (user) => ({
 
 export const userLoggedOut = () => ({
     type: USER_LOGGED_OUT
-})
+});
 
 // make an api request, then take the result and dispatch an action
 export const login = (credentials) => (dispatch) => 

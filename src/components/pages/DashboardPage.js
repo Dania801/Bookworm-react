@@ -37,6 +37,7 @@ function mapStateToProps(state) {
 };
 
 function mapStateToProps(state) {
+    console.log(state)
     return {
         isConfirmed: state.user.confirmed 
 >>>>>>> 3827226... Authorized routes
