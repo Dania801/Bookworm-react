@@ -20,6 +20,7 @@ DashboardPage.propTypes = {
 };
 
 function mapStateToProps(state) {
+    console.log(state)
     return {
         isConfirmed: state.user.confirmed,
         books: allBooksSelector(state)
