@@ -7,22 +7,11 @@ class SearchBookForm extends React.Component{
     state = {
         query: '',
         loading: false, 
-        options: [{
-            key: 1, 
-            value: 1,
-            text: "first book"
-        },{
-            key: 2, 
-            value: 2,
-            text: "second book"
-        }],
-        books: {
-
-        }
+        options: [],
+        books: {}
     }
 
     onSearchChange = (e, data) => {
-        console.log('timer ==> ', this.timer)
         clearTimeout(this.timer);
         this.setState({
             query: data
@@ -50,7 +39,7 @@ class SearchBookForm extends React.Component{
             })
     }
 
-    onChange = (e, data) => {
+    onChange = (e, data) => { // when a book is selected from the list of options
         this.setState({ query: data.value });
         this.props.onBookSelect(this.state.books[data.value]);
     }
