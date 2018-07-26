@@ -22,7 +22,7 @@ class NewBookPage extends React.Component {
                     }
             })})
     };
-    addBook = () => console.log('hey')
+    addBook = (book) => this.props.createBook(book).then(() => this.props.history.push('/dashboard'))
 
     render() {
         return (
