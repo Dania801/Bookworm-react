@@ -7,6 +7,7 @@ export default {
         confirm: (token) => axios.post('/api/auth/confirmation', {token}).then(res => res.data.user)
     },
     books: {
-        fetchAll: () => axios.get('/api/books').then(res => res.data)
+        fetchAll: () => axios.get('/api/books').then(res => res.data),
+        create: book => axios.post('/api/books', { book }).then(res => res.data.book)
     }
 }
